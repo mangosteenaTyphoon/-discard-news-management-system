@@ -4,5 +4,6 @@
     <file url="file://$PROJECT_DIR$/news-common/common-base/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/news-database/database-mybatis-plus/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/news-database/database-redis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/news-web/src/main/java" charset="UTF-8" />
   </component>
 </project>

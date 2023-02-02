@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="news-web" />
         <module name="common-base" />
         <module name="database-mybatis-plus" />
         <module name="database-redis" />
@@ -19,6 +20,7 @@
       <module name="database-redis" options="-parameters" />
       <module name="news-common" options="-parameters" />
       <module name="news-database" options="-parameters" />
+      <module name="news-web" options="-parameters" />
     </option>
   </component>
 </project>
