@@ -9,6 +9,7 @@
     <version>1.0.0</version>
     <modules>
         <module>news-common</module>
+        <module>news-database</module>
     </modules>
     <packaging>pom</packaging>
     <parent>
@@ -24,8 +25,8 @@
         <spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
         <ams.version>1.0.0</ams.version>
         <hutool.version>5.5.8</hutool.version>
-        <mysql.version>8.0.19</mysql.version>
         <druid.version>1.2.4</druid.version>
+        <mysql.version>8.0.19</mysql.version>
         <mybatis-plus.version>3.4.3</mybatis-plus.version>
     </properties>
     <dependencies>
@@ -65,6 +66,17 @@
                 <version>${mysql.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
         </dependencies>
 
     </dependencyManagement>
