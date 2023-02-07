@@ -2,24 +2,37 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="news-web" />
+        <module name="database-redis" />
+        <module name="news-gateway" />
         <module name="common-base" />
         <module name="database-mybatis-plus" />
-        <module name="database-redis" />
+        <module name="news-business" />
+        <module name="news-config" />
+        <module name="news-business-admin" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="news-user" target="1.8" />
+      <module name="news-web" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="common-base" options="-parameters" />
       <module name="database-mybatis-plus" options="-parameters" />
       <module name="database-redis" options="-parameters" />
+      <module name="news-business" options="-parameters" />
+      <module name="news-business-admin" options="-parameters" />
       <module name="news-common" options="-parameters" />
+      <module name="news-config" options="-parameters" />
       <module name="news-database" options="-parameters" />
+      <module name="news-gateway" options="-parameters" />
+      <module name="news-user" options="-parameters" />
       <module name="news-web" options="-parameters" />
     </option>
   </component>

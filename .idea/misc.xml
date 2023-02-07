@@ -9,11 +9,13 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/news-common/pom.xml" />
+        <option value="$PROJECT_DIR$/news-business/news-business-admin/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/common-base/pom.xml" />
+        <option value="$PROJECT_DIR$/news-web/pom.xml" />
       </set>
     </option>
   </component>

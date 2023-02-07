@@ -10,7 +10,9 @@
     <modules>
         <module>news-common</module>
         <module>news-database</module>
-        <module>news-web</module>
+        <module>news-business</module>
+        <module>news-config</module>
+        <module>news-gateway</module>
     </modules>
     <packaging>pom</packaging>
     <parent>
@@ -21,14 +23,16 @@
     </parent>
 
     <properties>
+        <java.version>8</java.version>
         <spring-boot.version>2.5.4</spring-boot.version>
-        <spring-cloud.version>2020.0.3</spring-cloud.version>
+        <spring-cloud.version>2020.0.6</spring-cloud.version>
         <spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
         <ams.version>1.0.0</ams.version>
         <hutool.version>5.5.8</hutool.version>
         <druid.version>1.2.4</druid.version>
         <mysql.version>8.0.19</mysql.version>
         <mybatis-plus.version>3.4.3</mybatis-plus.version>
+        <sa-token.version>1.34.0</sa-token.version>
     </properties>
     <dependencies>
         <dependency>
@@ -40,10 +44,21 @@
             <artifactId>hutool-all</artifactId>
             <version>${hutool.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+        </dependency>
     </dependencies>
+
+
     <dependencyManagement>
         <dependencies>
-
             <!--SpringCloud 相关依赖            -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
