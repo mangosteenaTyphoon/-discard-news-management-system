@@ -10,6 +10,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>news-business</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>news-user</module>
+    </modules>
 
+    <dependencies>
+
+
+
+    </dependencies>
 
 </project>
