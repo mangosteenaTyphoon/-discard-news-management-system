@@ -10,6 +10,12 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.news.commons</groupId>
     <artifactId>news-commons-base</artifactId>
-
+    <dependencies>
+        <dependency>
+            <groupId>com.news.commons</groupId>
+            <artifactId>news-common-swagger</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
 
 </project>

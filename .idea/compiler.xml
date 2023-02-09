@@ -14,6 +14,7 @@
         <module name="news-common-swagger" />
         <module name="news-common-base" />
         <module name="news-config" />
+        <module name="news-common-banner" />
         <module name="news-user" />
         <module name="news-business-admin" />
       </profile>
@@ -31,6 +32,7 @@
       <module name="news-auth" options="-parameters" />
       <module name="news-business" options="-parameters" />
       <module name="news-business-admin" options="-parameters" />
+      <module name="news-common-banner" options="-parameters" />
       <module name="news-common-base" options="-parameters" />
       <module name="news-common-swagger" options="-parameters" />
       <module name="news-commons" options="-parameters" />

@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: news-gateway
+
+## gateway 配置
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true

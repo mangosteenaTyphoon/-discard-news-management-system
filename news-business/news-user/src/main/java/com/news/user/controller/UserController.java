@@ -21,7 +21,7 @@ import java.util.List;
  * @since 2023-02-08
  */
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/news-user")
 public class UserController {
 
     @Autowired
@@ -30,7 +30,7 @@ public class UserController {
     @GetMapping("getUser")
     public R getUser(){
         List<User> list = userService.list(null);
-        return R.ok().code(20001).data("list",list);
+        return R.ok().code(20001).data("list",list).message("");
     }
 
 }
