@@ -14,6 +14,7 @@
         <module>news-config</module>
         <module>news-gateway</module>
         <module>news-auth</module>
+        <module>news- reptiles</module>
     </modules>
     <packaging>pom</packaging>
     <parent>
