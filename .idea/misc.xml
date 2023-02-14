@@ -12,6 +12,7 @@
         <option value="$PROJECT_DIR$/news-business/news-business-admin/pom.xml" />
         <option value="$PROJECT_DIR$/news-common/news-commons-swagger/pom.xml" />
         <option value="$PROJECT_DIR$/news-commons/pom.xml" />
+        <option value="$PROJECT_DIR$/news-security/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

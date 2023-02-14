@@ -16,6 +16,7 @@
         <module>news-common-base</module>
         <module>news-common-swagger</module>
         <module>news-common-banner</module>
+        <module>news-common-sentinel</module>
     </modules>
 
     <dependencies>
