@@ -18,6 +18,7 @@
       <set>
         <option value="$PROJECT_DIR$/common-base/pom.xml" />
         <option value="$PROJECT_DIR$/news-common/common-base/pom.xml" />
+        <option value="$PROJECT_DIR$/news-commons/news-common-core/pom.xml" />
         <option value="$PROJECT_DIR$/news-web/pom.xml" />
       </set>
     </option>

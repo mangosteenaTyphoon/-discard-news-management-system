@@ -12,6 +12,7 @@
         <module name="news-auth" />
         <module name="database-mybatis-plus" />
         <module name="news-common-swagger" />
+        <module name="news-common-core" />
         <module name="news-common-base" />
         <module name="news-config" />
         <module name="news- reptiles" />
@@ -22,6 +23,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="common-base" target="1.8" />
+      <module name="news-common-core" target="1.8" />
       <module name="news-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -36,6 +38,7 @@
       <module name="news-business-admin" options="-parameters" />
       <module name="news-common-banner" options="-parameters" />
       <module name="news-common-base" options="-parameters" />
+      <module name="news-common-core" options="-parameters" />
       <module name="news-common-swagger" options="-parameters" />
       <module name="news-commons" options="-parameters" />
       <module name="news-config" options="-parameters" />

@@ -26,6 +26,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.news.commons</groupId>
+            <artifactId>news-commons-base</artifactId>
+            <version>1.0.0</version>
+        </dependency>
 
     </dependencies>
 </project>
