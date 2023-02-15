@@ -1,0 +1,49 @@
+spring:
+  datasource:
+    url: jdbc:mysql://${news.datasource.ip}:3306/sys_user?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
+    username: ${news.datasource.username}
+    password: ${news.datasource.password}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    lettuce:
+      pool:
+        max-active: 1500
+        max-wait: 5000
+        max-idle: 500
+        min-idle: 100
+        shutdown-timeout: 1000
+files:
+  access_url: http://computer.youcongtech.com
+#请求处理的超时时间
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+
+# feign 配置
+feign:
+  sentinel:
+    enabled: true
+  okhttp:
+    enabled: true
+  httpclient:
+    enabled: false
+  client:
+    config:
+      default:
+        connectTimeout: 100000
+        readTimeout: 100000
+  compression:
+    request:
+      enabled: false
+    response:
+      enabled: false
+# 打开客户端的监控
+management:
+  endpoints:
+    sensitive: false
+    web:
+      exposure:
+        include: '*'

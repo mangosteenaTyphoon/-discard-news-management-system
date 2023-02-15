@@ -1,66 +1,58 @@
 package com.common.base.result;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.io.Serializable;
 
 //统一返回结果的类
 @Data
-public class R {
+@AllArgsConstructor
+@NoArgsConstructor
+public class R<T> implements Serializable {
+    private String code;
+    private String msg;
+    private T data;
 
-    private Boolean success;
-
-    private Integer code;
-
-    private String message;
-
-    private Map<String, Object> data = new HashMap<String, Object>();
-
-    //把构造方法私有
-    private R() {}
-
-    //成功静态方法
-    public static R ok() {
-        R r = new R();
-        r.setSuccess(true);
-        r.setCode(ResultCode.SUCCESS);
-        r.setMessage("成功");
-        return r;
+    public R(String code) {
+        this.code = code;
+        this.msg = ResultCode.SELECT_SUCCESS.getCode();
     }
 
-    //失败静态方法
-    public static R error() {
-        R r = new R();
-        r.setSuccess(false);
-        r.setCode(ResultCode.ERROR);
-        r.setMessage("失败");
-        return r;
+    public R(String code, String msg) {
+        this.code = code;
+        this.msg = msg;
     }
 
-    public R success(Boolean success){
-        this.setSuccess(success);
-        return this;
+    public R(T data) {
+        this.code = ResultCode.SELECT_SUCCESS.getCode();
+        this.data = data;
+        this.msg = ResultCode.SELECT_SUCCESS.getMsg();
     }
 
-    public R message(String message){
-        this.setMessage(message);
-        return this;
+    public static R success() {
+        return new R(ResultCode.SELECT_SUCCESS.getCode());
     }
 
-    public R code(Integer code){
-        this.setCode(code);
-        return this;
+    public static R success(Object data) {
+        return new R(data);
     }
 
-    public R data(String key, Object value){
-        this.data.put(key, value);
-        return this;
+    public static R fail() {
+        return new R(ResultCode.FAIL_ERROR);
     }
 
-    public R data(Map<String, Object> map){
-        this.setData(map);
-        return this;
+    public static R fail(String msg) {
+        return R.fail(ResultCode.FAIL_ERROR.getCode(), msg);
+    }
+
+    public static R fail(String code, String msg) {
+        return new R(code, msg);
+    }
+
+    public static <T> R<T> failed(ErrorCode errorCode) {
+        return new R<T>(errorCode.getCode(), errorCode.getMsg(), null);
     }
 }
 

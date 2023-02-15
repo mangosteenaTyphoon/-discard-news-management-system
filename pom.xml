@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.news</groupId>
-    <artifactId>news_micro_platform</artifactId>
+    <artifactId>news-micro-platform</artifactId>
     <version>1.0.0</version>
     <modules>
         <module>news-commons</module>
@@ -13,8 +13,9 @@
         <module>news-business</module>
         <module>news-config</module>
         <module>news-gateway</module>
-        <module>news-security</module>
         <module>news- reptiles</module>
+        <module>news-api</module>
+        <module>news-uaa</module>
     </modules>
     <packaging>pom</packaging>
     <parent>
@@ -26,11 +27,12 @@
 
     <properties>
         <java.version>8</java.version>
-        <spring-boot.version>2.5.4</spring-boot.version>
-        <spring-cloud.version>2020.0.6</spring-cloud.version>
-        <spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
+        <spring-boot.version>2.3.12.RELEASE</spring-boot.version>
+        <spring-cloud.version>Hoxton.SR12</spring-cloud.version>
+        <spring-boot-admin.version>2.2.3</spring-boot-admin.version>
+        <spring-cloud-alibaba.version>2.2.1.RELEASE</spring-cloud-alibaba.version>
         <ams.version>1.0.0</ams.version>
-        <hutool.version>5.5.8</hutool.version>
+        <hutool.version>5.7.13</hutool.version>
         <druid.version>1.2.4</druid.version>
         <mysql.version>8.0.19</mysql.version>
         <mybatis-plus.version>3.0.5</mybatis-plus.version>
@@ -38,6 +40,8 @@
         <knife4j.version>2.0.9</knife4j.version>
         <velocity.version>2.0</velocity.version>
         <okhttp.version>10.12</okhttp.version>
+        <commons.io.version>2.5</commons.io.version>
+
     </properties>
     <dependencies>
         <dependency>
@@ -47,6 +51,7 @@
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
+            <scope>compile</scope>
             <version>${hutool.version}</version>
         </dependency>
         <dependency>
@@ -58,6 +63,7 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bootstrap</artifactId>
+            <version>3.1.0</version>
         </dependency>
     </dependencies>
 
@@ -97,6 +103,13 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <!--  SpringBoot 监控客户端 -->
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-client</artifactId>
+                <version>${spring-boot-admin.version}</version>
             </dependency>
         </dependencies>
 

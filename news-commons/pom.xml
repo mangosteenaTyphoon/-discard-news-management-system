@@ -3,20 +3,25 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>news_micro_platform</artifactId>
+        <artifactId>news-micro-platform</artifactId>
         <groupId>com.news</groupId>
         <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.news-common</groupId>
-    <artifactId>news_common</artifactId>
+    <artifactId>news-common</artifactId>
     <packaging>pom</packaging>
     <modules>
         <module>news-common-base</module>
         <module>news-common-swagger</module>
         <module>news-common-banner</module>
         <module>news-common-sentinel</module>
+        <module>news-common-openfeign</module>
+        <module>news-common-security</module>
+        <module>news-common-nacos</module>
+        <module>news-common-montor</module>
+        <module>news-common-log</module>
     </modules>
 
     <dependencies>

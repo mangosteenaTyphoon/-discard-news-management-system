@@ -18,7 +18,7 @@ public class GlobalExceptionHandler {
     @ResponseBody//这个为了返回数据
     public R error(Exception e){
         e.printStackTrace();
-        return R.error().message("执行了全局处理异常");
+        return R.fail("执行了全局异常");
     }
 
     @ExceptionHandler(MyException.class)
@@ -26,7 +26,7 @@ public class GlobalExceptionHandler {
     public R error(MyException e){
         log.error(e.getName());
         e.printStackTrace();
-        return R.error().code(e.getCode()).message(e.getName());
+        return R.fail(e.getMessage());
     }
 
 
