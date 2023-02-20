@@ -13,8 +13,9 @@
     <description>配置中心</description>
     <dependencies>
         <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+            <groupId>com.news-common</groupId>
+            <artifactId>news-common-nacos</artifactId>
+            <version>1.0.0</version>
         </dependency>
     </dependencies>
 

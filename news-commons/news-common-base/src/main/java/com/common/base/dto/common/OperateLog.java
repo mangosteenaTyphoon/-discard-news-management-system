@@ -1,8 +1,8 @@
 package com.common.base.dto.common;
 
 import lombok.Data;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+//import org.springframework.data.annotation.Id;
+//import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
 
@@ -14,14 +14,14 @@ import java.util.Date;
  */
 
 @Data
-@Document("operate_log")
+//@Document("operate_log")
 public class OperateLog {
     private static final long serialVersionUID = 1L;
 
     /**
      * 日志主键
      */
-    @Id
+//    @Id
     private String operId;
 
     /**

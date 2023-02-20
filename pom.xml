@@ -16,24 +16,19 @@
         <module>news- reptiles</module>
         <module>news-api</module>
         <module>news-uaa</module>
+        <module>news-doc</module>
     </modules>
     <packaging>pom</packaging>
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.5.4</version>
 
-    </parent>
 
     <properties>
-        <java.version>8</java.version>
+        <java.version>1.8</java.version>
         <spring-boot.version>2.3.12.RELEASE</spring-boot.version>
         <spring-cloud.version>Hoxton.SR12</spring-cloud.version>
         <spring-boot-admin.version>2.2.3</spring-boot-admin.version>
         <spring-cloud-alibaba.version>2.2.1.RELEASE</spring-cloud-alibaba.version>
-        <ams.version>1.0.0</ams.version>
         <hutool.version>5.7.13</hutool.version>
-        <druid.version>1.2.4</druid.version>
+        <druid.version>1.1.13</druid.version>
         <mysql.version>8.0.19</mysql.version>
         <mybatis-plus.version>3.0.5</mybatis-plus.version>
         <sa-token.version>1.32.0</sa-token.version>
@@ -41,6 +36,7 @@
         <velocity.version>2.0</velocity.version>
         <okhttp.version>10.12</okhttp.version>
         <commons.io.version>2.5</commons.io.version>
+        <nacos.version>1.4.3</nacos.version>
 
     </properties>
     <dependencies>
@@ -110,6 +106,15 @@
                 <groupId>de.codecentric</groupId>
                 <artifactId>spring-boot-admin-starter-client</artifactId>
                 <version>${spring-boot-admin.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
 

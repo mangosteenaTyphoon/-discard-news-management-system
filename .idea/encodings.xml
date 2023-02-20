@@ -8,7 +8,6 @@
     <file url="file://$PROJECT_DIR$/news-commons/news-common-base/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/news-commons/news-common-log/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/news-commons/news-common-montor/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/news-commons/news-common-nacos/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/news-commons/news-common-security/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/news-commons/news-common-swagger/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/news-database/database-mybatis-plus/src/main/java" charset="UTF-8" />

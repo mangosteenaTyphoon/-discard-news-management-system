@@ -12,19 +12,46 @@
     <artifactId>news-gateway</artifactId>
 
     <dependencies>
+        <!-- SpringCloud Gateway -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
 
+
         <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+            <groupId>com.news-common</groupId>
+            <artifactId>news-common-sentinel</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.news.commons</groupId>
+            <artifactId>news-commons-base</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-spring-boot-starter</artifactId>
+            <version>${knife4j.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.news-common</groupId>
+            <artifactId>news-common-montor</artifactId>
+            <version>1.0.0</version>
         </dependency>
 
         <dependency>
             <groupId>com.news</groupId>
             <artifactId>news-config</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.news-common</groupId>
+            <artifactId>news-common-banner</artifactId>
             <version>1.0.0</version>
         </dependency>
 
