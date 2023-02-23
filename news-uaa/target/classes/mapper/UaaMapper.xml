@@ -10,7 +10,6 @@
         <result property="email" column="email"/>
         <result property="phone" column="phone"/>
         <result property="nickName" column="nick_name"/>
-        <result property="companyId" column="company_id"/>
         <result property="sex" column="sex"/>
         <result property="status" column="status"/>
     </resultMap>
@@ -23,11 +22,10 @@
         email,
         phone,
         nick_name,
-        company_id,
         sex,
         `status`
         FROM
-        yc_user
+        sys_user
         <where>
             <if test="type!=null and type == 1">
                 user_name = #{account}
@@ -46,8 +44,8 @@
         SELECT
             role_key
         FROM
-            yc_role AS A
-            LEFT JOIN yc_user_role AS B ON ( A.id = B.role_id )
+            sys_role AS A
+            LEFT JOIN sys_user_role AS B ON ( A.id = B.role_id )
         WHERE
             B.user_id = #{userId}
     </select>
@@ -57,11 +55,11 @@
         SELECT
             E.menu_url
         FROM
-            yc_user AS A
-            LEFT JOIN yc_user_role AS B ON ( A.id = B.user_id )
-          LEFT JOIN yc_role AS C ON(C.id = B.role_id)
-            LEFT JOIN yc_role_menu AS D ON(D.role_id = c.id)
-            LEFT JOIN yc_menu AS E ON(E.id = D.menu_id)
+            sys_user AS A
+            LEFT JOIN sys_user_role AS B ON ( A.id = B.user_id )
+          LEFT JOIN sys_role AS C ON(C.id = B.role_id)
+            LEFT JOIN sys_role_menu AS D ON(D.role_id = c.id)
+            LEFT JOIN sys_menu AS E ON(E.id = D.menu_id)
             WHERE A.id = #{userId}
     </select>
 </mapper>

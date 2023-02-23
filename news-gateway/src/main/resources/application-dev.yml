@@ -12,16 +12,14 @@ spring:
           predicates:
             - Path=/auth/**
           filters:
-            - SwaggerHeaderFilter
             - StripPrefix=1
 #        ## admin
-#        - id: yc-admin
-#          uri: lb://yc-admin
-#          predicates:
-#            - Path=/admin/**
-#          filters:
-#            - SwaggerHeaderFilter
-#            - StripPrefix=1
+        - id: news-user
+          uri: lb://news-user
+          predicates:
+            - Path=/user/**
+          filters:
+            - StripPrefix=1
         ## cms
 #        - id: yc-cms
 #          uri: lb://yc-cms

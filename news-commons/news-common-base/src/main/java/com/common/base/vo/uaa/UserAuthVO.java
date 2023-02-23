@@ -24,8 +24,6 @@ public class UserAuthVO {
 
     private String nickName;
 
-    private Long companyId;
-
     private Integer sex;
 
     private Integer status;

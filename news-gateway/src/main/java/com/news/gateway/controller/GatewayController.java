@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class GatewayController {
-    @PostMapping("/")
+    @PostMapping("/news")
     public R index() {
         return R.success();
     }

@@ -46,11 +46,11 @@ public class SaTokenConfigure implements WebMvcConfigurer, StpInterface {
             SaRouter.match("/company/**", () -> StpUtil.checkRoleOr("admin", "super-admin"));
             //权限认证
             SaRouter.match("/company/**", () -> StpUtil.checkPermission("company"));
-            SaRouter.match("/user/**", () -> StpUtil.checkPermission("admin"));
-            SaRouter.match("/role/**", () -> StpUtil.checkPermission("admin"));
+            SaRouter.match("/user/**", () -> StpUtil.checkPermission("user"));
+            SaRouter.match("/role/**", () -> StpUtil.checkPermission("user"));
 
         })).addPathPatterns("/**").excludePathPatterns(
-                "/auth/**", "/operate_log/add", "/doc.html", "/webjars/**", "/swagger-resources", "/actuator/**");
+                "/auth/**", "/operate_log/add", "/doc.html", "/webjars/**", "/swagger-resources", "/actuator/**","/user/saveOrUpdate");
     }
 
     @Override

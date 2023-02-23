@@ -1,7 +1,7 @@
 spring:
   #数据源配置
   datasource:
-    url: jdbc:mysql://${news.mysql.ip}:3306/yc-framework?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://${news.mysql.ip}:3306/news_user?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
     username: ${news.mysql.username}
     password: ${news.mysql.password}
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -9,7 +9,7 @@ spring:
   redis:
     host: ${news.redis.ip}
     port: ${news.redis.port}
-    password:
+    password: ${news.redis.password}
     lettuce:
       pool:
         max-active: 1500

@@ -19,6 +19,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -28,18 +29,19 @@ import java.util.Map;
 @RestController
 @Slf4j
 @Api(tags = {"认证管理"}, description = "认证管理")
+@RequestMapping("auth")
 public class AuthController {
 
     @Autowired
     private UserAuthService userAuthService;
 
     /**
-     * 登录
+     * 用户进行登录
      *
      * @param reqDTO
      * @return
      */
-    @PostMapping("/auth/login")
+    @PostMapping("/login")
     @ApiOperation("登录")
     @Log("登录")
     public R login(@RequestBody UserAuthInfoReqDTO reqDTO) {
@@ -68,7 +70,7 @@ public class AuthController {
      *
      * @return
      */
-    @PostMapping("/auth/isLogin")
+    @PostMapping("/isLogin")
     @ApiOperation("登录状态")
     @Log("登录状态")
     @SaCheckLogin
@@ -81,7 +83,7 @@ public class AuthController {
      *
      * @return
      */
-    @PostMapping("/auth/getTokenInfo")
+    @PostMapping("/getTokenInfo")
     @ApiOperation("获取Token信息")
     @Log("获取Token信息")
     @SaCheckLogin
@@ -95,7 +97,7 @@ public class AuthController {
      * @param reqDTO
      * @return
      */
-    @PostMapping("/auth/logout")
+    @PostMapping("/logout")
     @ApiOperation("退出")
     @Log("退出")
     @SaCheckLogin
@@ -110,7 +112,7 @@ public class AuthController {
      * @param reqDTO
      * @return
      */
-    @PostMapping("/auth/getRole")
+    @PostMapping("/getRole")
     @ApiOperation("获取用户对应的角色")
     public R<List<String>> getRole(@RequestBody UserIdReqDTO reqDTO) {
         return R.success(userAuthService.queryUserIdByRole(reqDTO));
@@ -122,7 +124,7 @@ public class AuthController {
      * @param reqDTO
      * @return
      */
-    @PostMapping("/auth/getPerm")
+    @PostMapping("/getPerm")
     @ApiOperation("获取用户对应的角色菜单URL")
     public R<List<String>> getPerm(@RequestBody UserIdReqDTO reqDTO) {
         return R.success(userAuthService.queryUserIdByPerm(reqDTO));

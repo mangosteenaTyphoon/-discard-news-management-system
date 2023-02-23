@@ -6,6 +6,7 @@ package com.common.swagger.config;
  * @description: TODO
  * @date 2023/2/8 9:36
  */
+
 import cn.hutool.core.lang.Console;
 import com.common.base.constant.ApplicationConst;
 import org.springframework.beans.factory.annotation.Value;
@@ -29,7 +30,7 @@ public class SwaggerConfig {
 
     private static final String URL = "http://www.ycframework.com/";
 
-    private static final String AUTHOR_EMAIL = "youcongtech@163.com";
+    private static final String AUTHOR_EMAIL = "shanzhu@163.com";
 
     private static final String VERSION = "1.0";
 
@@ -37,6 +38,7 @@ public class SwaggerConfig {
 
     @Bean(value = "api")
     public Docket groupRestApi() {
+        System.out.println(PathSelectors.any());
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(groupApiInfo())
                 .select()
@@ -78,6 +80,9 @@ public class SwaggerConfig {
         return docket;
     }
 
+
+
+
     /**
      * 包扫描自定义
      *
@@ -88,12 +93,12 @@ public class SwaggerConfig {
         Console.log("applicationName:" + applicationName);
         String basePackage = "";
         switch (applicationName) {
+            case ApplicationConst.UAA:
+                basePackage = ApplicationConst.KNIFE4J_UAA_PACKAGE;
+                break;
             case ApplicationConst.USER:
                 basePackage = ApplicationConst.KNIFE4J_USER_PACKAGE;
                 break;
-//            case ApplicationConst.ADMIN:
-//                basePackage = ApplicationConst.KNIFE4J_ADMIN_PACKAGE;
-//                break;
 //            case ApplicationConst.CMS:
 //                basePackage = ApplicationConst.KNIFE4J_CMS_PACKAGE;
 //                break;
@@ -127,12 +132,12 @@ public class SwaggerConfig {
         Console.log("applicationName:" + applicationName);
         String title = "";
         switch (applicationName) {
-            case ApplicationConst.USER:
-                title = "用户管理服务中心";
+            case ApplicationConst.UAA:
+                title = "统一认证鉴权中心";
                 break;
-//            case ApplicationConst.ADMIN:
-//                title = "统一用户管理";
-//                break;
+            case ApplicationConst.USER:
+                title = "统一用户管理";
+                break;
 //            case ApplicationConst.CMS:
 //                title = "统一内容管理";
 //                break;
@@ -166,12 +171,12 @@ public class SwaggerConfig {
         Console.log("applicationName:" + applicationName);
         String desc = "";
         switch (applicationName) {
-            case ApplicationConst.USER:
-                desc = "USER API";
+            case ApplicationConst.UAA:
+                desc = "新闻系统进行管理用户认证和鉴权的服务中心";
                 break;
-//            case ApplicationConst.ADMIN:
-//                desc = "User API";
-//                break;
+            case ApplicationConst.USER:
+                desc = "管理系統用戶";
+                break;
 //            case ApplicationConst.CMS:
 //                desc = "CMS API";
 //                break;

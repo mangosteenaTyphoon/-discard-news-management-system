@@ -13,11 +13,13 @@
         <option value="$PROJECT_DIR$/news-common/news-commons-swagger/pom.xml" />
         <option value="$PROJECT_DIR$/news-commons/pom.xml" />
         <option value="$PROJECT_DIR$/news-security/pom.xml" />
+        <option value="$PROJECT_DIR$/news-business/news-business-user/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/common-base/pom.xml" />
+        <option value="$PROJECT_DIR$/news-business/news-user/pom.xml" />
         <option value="$PROJECT_DIR$/news-common/common-base/pom.xml" />
         <option value="$PROJECT_DIR$/news-commons/news-common-core/pom.xml" />
         <option value="$PROJECT_DIR$/news-web/pom.xml" />

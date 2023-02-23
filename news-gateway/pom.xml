@@ -29,6 +29,11 @@
             <groupId>com.news.commons</groupId>
             <artifactId>news-commons-base</artifactId>
             <version>1.0.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.news</groupId>
+                    <artifactId>news-database-mybatis-plus</artifactId>
+                </exclusion></exclusions>
         </dependency>
 
         <dependency>

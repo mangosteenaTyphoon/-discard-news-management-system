@@ -12,15 +12,14 @@
         <module name="news-common-base" />
         <module name="news-doc" />
         <module name="news-common-core" />
-        <module name="news-business-admin" />
+        <module name="news-news-user" />
         <module name="news-commons-base" />
+        <module name="news-config" />
         <module name="news-uaa" />
         <module name="news- reptiles" />
-        <module name="news-user" />
         <module name="news-common-swagger" />
         <module name="news-common-security" />
         <module name="news-common-openfeign" />
-        <module name="news-config" />
         <module name="news-api" />
         <module name="news-common-nacos" />
         <module name="database-redis" />
@@ -33,6 +32,7 @@
     <bytecodeTargetLevel>
       <module name="common-base" target="1.8" />
       <module name="news-common-core" target="1.8" />
+      <module name="news-user" target="1.8" />
       <module name="news-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -44,7 +44,6 @@
       <module name="news- reptiles" options="" />
       <module name="news-api" options="" />
       <module name="news-business" options="-parameters" />
-      <module name="news-business-admin" options="" />
       <module name="news-common-banner" options="" />
       <module name="news-common-base" options="" />
       <module name="news-common-core" options="-parameters" />
@@ -60,6 +59,7 @@
       <module name="news-config" options="" />
       <module name="news-database" options="-parameters" />
       <module name="news-gateway" options="" />
+      <module name="news-news-user" options="" />
       <module name="news-uaa" options="" />
       <module name="news-user" options="" />
       <module name="news-web" options="-parameters" />
