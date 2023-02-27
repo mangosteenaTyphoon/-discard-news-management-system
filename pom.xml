@@ -13,7 +13,6 @@
         <module>news-business</module>
         <module>news-config</module>
         <module>news-gateway</module>
-        <module>news- reptiles</module>
         <module>news-api</module>
         <module>news-uaa</module>
         <module>news-doc</module>

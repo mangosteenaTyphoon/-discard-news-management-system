@@ -13,7 +13,7 @@ spring:
             - Path=/auth/**
           filters:
             - StripPrefix=1
-#        ## admin
+        ## admin
         - id: news-user
           uri: lb://news-user
           predicates:

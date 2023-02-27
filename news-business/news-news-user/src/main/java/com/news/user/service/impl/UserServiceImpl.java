@@ -3,9 +3,14 @@ package com.news.user.service.impl;
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.util.IdUtil;
 import cn.hutool.core.util.StrUtil;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.common.base.constant.UserConst;
 import com.common.base.dto.user.UserAddOrUpdateReqDTO;
+import com.common.base.dto.user.UserIdDTO;
+import com.common.base.dto.user.UserPageReqDTO;
+import com.common.base.dto.user.UserPwdValidReqDTO;
 import com.common.base.enity.user.UserEntity;
 import com.common.base.utils.JbcryptUtil;
 import com.news.user.mapper.UserMapper;
@@ -32,8 +37,34 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, UserEntity>  implem
         return handleUserAddOrUpdate(reqDTO);
     }
 
+    @Override
+    public int changeUserStatus(UserIdDTO userIdDTO, int userStatusDel) {
+        UserEntity userEntity = new UserEntity();
+        userEntity.setId(userIdDTO.getUserId());
+        userEntity.setStatus(userStatusDel);
+        return userMapper.updateById(userEntity);
+    }
 
+    @Override
+    public UserEntity selectUserOne(UserIdDTO reqDTO) {
+        UserEntity userEntity = userMapper.selectById(reqDTO.getUserId());
+        userEntity.setPassword(null);
+        return userEntity;
+    }
 
+    @Override
+    public int changePwd(UserPwdValidReqDTO reqDTO) {
+            UserEntity userEntity = new UserEntity();
+            userEntity.setId(reqDTO.getUserId());
+            userEntity.setPassword(JbcryptUtil.bcryptPwd(reqDTO.getPwd()));
+            return userMapper.updateById(userEntity);
+    }
+
+    @Override
+    public IPage<UserEntity> queryUserPageList(UserPageReqDTO reqDTO) {
+        Page<UserEntity> page = new Page<>(reqDTO.getPageNum(), reqDTO.getPageSize());
+        return userMapper.selectUserPageList(page, reqDTO);
+    }
 
 
     private int handleUserAddOrUpdate(UserAddOrUpdateReqDTO reqDTO) {

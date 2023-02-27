@@ -26,7 +26,6 @@ public class BlackListUrlFilter extends AbstractGatewayFilterFactory<BlackListUr
         return (exchange, chain) -> {
 
             String url = exchange.getRequest().getURI().getPath();
-            System.out.println(url);
             if (config.matchBlacklist(url))
             {
                 ServerHttpResponse response = exchange.getResponse();

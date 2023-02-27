@@ -3,4 +3,29 @@
 <mapper namespace="com.news.user.mapper.UserMapper">
 
 
+
+    <select id="selectUserPageList" resultType="com.common.base.enity.user.UserEntity">
+        SELECT
+        id,
+        user_name,
+        nick_name,
+        email,
+        phone,
+        status,
+        sex,
+        email,
+        company_id,
+        create_time,
+        update_time
+        FROM
+        yc_user
+        <where>
+            <if test="param.nickName != null and param.nickName!=''">
+                and nick_name LIKE concat('%',#{param.nickName},'%')
+            </if>
+            <if test="param.orderCon != null and param.orderCon!='' and param.sortCon != null and param.sortCon!=''">
+                order by ${param.orderCon} ${param.sortCon}
+            </if>
+        </where>
+    </select>
 </mapper>
