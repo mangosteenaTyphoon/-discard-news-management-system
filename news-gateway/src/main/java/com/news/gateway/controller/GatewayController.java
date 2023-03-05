@@ -13,6 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class GatewayController {
     @PostMapping("/")
     public R index() {
-        return R.success();
+        return R.success("成功");
     }
 }

@@ -61,7 +61,7 @@ public class AuthController {
             StpUtil.login(ID);
             return R.success(resultMap);
         }
-        return R.success();
+        return R.success("登录成功");
     }
 
 
@@ -103,7 +103,7 @@ public class AuthController {
     @SaCheckLogin
     public R logout(@RequestBody LogoutReqDTO reqDTO) {
         StpUtil.logout(reqDTO.getUserId());
-        return R.success();
+        return R.success("注销成功");
     }
 
     /**

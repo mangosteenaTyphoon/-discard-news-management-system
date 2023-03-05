@@ -1,4 +1,7 @@
 package com.news.user.service;
 
-public interface MenuService {
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.common.base.enity.user.MenuEntity;
+
+public interface MenuService extends IService<MenuEntity> {
 }

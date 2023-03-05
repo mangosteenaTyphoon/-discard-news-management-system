@@ -31,9 +31,10 @@ public class R<T> implements Serializable {
         this.msg = ResultCode.SELECT_SUCCESS.getMsg();
     }
 
-    public static R success() {
-        return new R(ResultCode.SELECT_SUCCESS.getCode());
+    public static R success(String msg) {
+        return new R(ResultCode.SELECT_SUCCESS.getCode(),msg);
     }
+
 
     public static R success(Object data) {
         return new R(data);

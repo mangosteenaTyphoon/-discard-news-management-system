@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.common.base.dto.user.UserPageReqDTO;
 import com.common.base.enity.user.UserEntity;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -19,5 +20,5 @@ public interface UserMapper extends BaseMapper<UserEntity> {
      * @param reqDTO
      * @return
      */
-    IPage<UserEntity> selectUserPageList(Page<UserEntity> page, UserPageReqDTO reqDTO);
+    IPage<UserEntity> selectUserPageList(Page page,@Param("param") UserPageReqDTO reqDTO);
 }
