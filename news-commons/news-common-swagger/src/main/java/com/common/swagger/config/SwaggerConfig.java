@@ -96,8 +96,8 @@ public class SwaggerConfig {
             case ApplicationConst.UAA:
                 basePackage = ApplicationConst.KNIFE4J_UAA_PACKAGE;
                 break;
-            case ApplicationConst.USER:
-                basePackage = ApplicationConst.KNIFE4J_USER_PACKAGE;
+            case ApplicationConst.ADMIN:
+                basePackage = ApplicationConst.KNIFE4J_ADMIN_PACKAGE;
                 break;
 //            case ApplicationConst.CMS:
 //                basePackage = ApplicationConst.KNIFE4J_CMS_PACKAGE;
@@ -135,7 +135,7 @@ public class SwaggerConfig {
             case ApplicationConst.UAA:
                 title = "统一认证鉴权中心";
                 break;
-            case ApplicationConst.USER:
+            case ApplicationConst.ADMIN:
                 title = "统一用户管理";
                 break;
 //            case ApplicationConst.CMS:
@@ -174,8 +174,8 @@ public class SwaggerConfig {
             case ApplicationConst.UAA:
                 desc = "新闻系统进行管理用户认证和鉴权的服务中心";
                 break;
-            case ApplicationConst.USER:
-                desc = "管理系統用戶";
+            case ApplicationConst.ADMIN:
+                desc = "管理系统用户菜单及权限等";
                 break;
 //            case ApplicationConst.CMS:
 //                desc = "CMS API";

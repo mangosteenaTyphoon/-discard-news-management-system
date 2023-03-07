@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.news.admin.mapper.UserMapper">
+
+
+
+    <select id="selectUserPageList" resultType="com.common.base.enity.user.UserEntity">
+        SELECT
+        id,
+        user_name,
+        nick_name,
+        email,
+        phone,
+        status,
+        sex,
+        email,
+        create_time,
+        update_time
+        FROM
+        sys_user
+        <where>
+           and status != 2
+            <if test="param.nickName != null and param.nickName!=''">
+                and nick_name LIKE concat('%',#{param.nickName},'%')
+            </if>
+        </where>
+        <if test="param.orderCon != null and param.orderCon!='' and param.sortCon != null and param.sortCon!=''">
+            order by ${param.orderCon} ${param.sortCon}
+        </if>
+    </select>
+</mapper>

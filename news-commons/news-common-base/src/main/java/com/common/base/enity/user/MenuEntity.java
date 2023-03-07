@@ -15,7 +15,7 @@ import lombok.Data;
 public class MenuEntity {
 
     @TableId
-    private Long id;
+    private String id;
 
     @TableField("menu_name")
     private String menuName;

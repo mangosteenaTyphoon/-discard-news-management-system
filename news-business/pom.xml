@@ -12,7 +12,7 @@
     <artifactId>news-business</artifactId>
     <packaging>pom</packaging>
     <modules>
-       <module>news-news-user</module>
+       <module>news-admin</module>
     </modules>
 
     <dependencies>

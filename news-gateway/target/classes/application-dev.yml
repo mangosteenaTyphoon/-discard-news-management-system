@@ -14,10 +14,10 @@ spring:
           filters:
             - StripPrefix=1
         ## admin
-        - id: news-user
-          uri: lb://news-user
+        - id: news-admin
+          uri: lb://news-admin
           predicates:
-            - Path=/user/**
+            - Path=/admin/**
           filters:
             - StripPrefix=1
         ## cms

@@ -43,11 +43,10 @@ public class SaTokenConfigure implements WebMvcConfigurer, StpInterface {
             //登录认证
             SaRouter.match("/**", () -> StpUtil.checkLogin());
             // 角色认证 -- 拦截以 admin 开头的路由，必须具备 admin 角色或者 super-admin 角色才可以通过认证
-            SaRouter.match("/company/**", () -> StpUtil.checkRoleOr("admin", "super-admin"));
-            SaRouter.match("/user/saveOrUpdate", () -> StpUtil.checkRoleOr("admin", "super-admin","user"));
+//            SaRouter.match("/company/**", () -> StpUtil.checkRoleOr("admin", "super-admin"));
             //权限认证
 //            SaRouter.match("/menu/**", () -> StpUtil.checkPermission("company"));
-            SaRouter.match("/user/**", () -> StpUtil.checkRoleOr("company","admin"));
+            SaRouter.match("/admin/**", () -> StpUtil.checkRoleOr("admin"));
 //            SaRouter.match("/user/**", () -> StpUtil.checkPermission("admin"));
 //            SaRouter.match("/role/**", () -> StpUtil.checkPermission("admin"));
 

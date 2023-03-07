@@ -3,7 +3,6 @@ package com.common.base.constant;
 /**
  * @description:
  * @author: youcong
- * @time: 2021/10/18 21:34
  */
 public class ApplicationConst {
 
@@ -24,13 +23,13 @@ public class ApplicationConst {
 //    public static final String FILE = "yc-file";
 //    public static final String PLUGINS = "yc-plugins";
 //    public static final String WECHAT = "yc-wechat";
-      public static final String USER = "news-user";
+
       public static final String UAA = "news-uaa";
       public static final String ADMIN = "news-admin";
     /**
      * 微服务路由扫描包
      */
-      public static final String KNIFE4J_USER_PACKAGE = "com.news.user.controller";
+      public static final String KNIFE4J_ADMIN_PACKAGE = "com.news.admin.controller";
       public static final String KNIFE4J_UAA_PACKAGE = "com.news.uaa.controller";
 //    public static final String KNIFE4J_ADMIN_PACKAGE = "com.yc.admin.controller";
 //    public static final String KNIFE4J_CMS_PACKAGE = "com.yc.cms.controller";
@@ -43,7 +42,7 @@ public class ApplicationConst {
      * Mapper扫描包
      */
       public static final String MAPPER_UAA = "com.news.uaa.mapper";
-      public static final String MAPPER_USER = "com.news.user.mapper";
+      public static final String MAPPER_USER = "com.news.admin.mapper";
 //    public static final String MAPPER_ADMIN = "com.yc.admin.mapper";
 //    public static final String MAPPER_CMS = "com.yc.cms.mapper";
 //    public static final String MAPPER_CRAWLER = "com.yc.crawler.mapper";
