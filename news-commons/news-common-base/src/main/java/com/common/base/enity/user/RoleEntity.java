@@ -12,7 +12,7 @@ import java.util.Date;
  * @time: 2021/9/19 20:35
  */
 @Data
-@TableName("yc_role")
+@TableName("sys_role")
 public class RoleEntity {
 
     @TableField

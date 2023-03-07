@@ -16,7 +16,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringCloudApplication
 @EnableFeignClients(basePackages = ApplicationConst.FEIGN_PACKAGE_SCANNER)
-@MapperScan(ApplicationConst.MAPPER_USER)
+@MapperScan(ApplicationConst.MAPPER_ADMIN)
 public class AdminApplication {
     public static void main(String[] args) {
         SpringApplication.run(AdminApplication.class,args);

@@ -12,20 +12,20 @@
         <module name="news-common-base" />
         <module name="news-doc" />
         <module name="news-common-core" />
-        <module name="news-commons-base" />
         <module name="news-uaa" />
         <module name="news-admin" />
+        <module name="news-database-mybatis-plus" />
         <module name="news-common-swagger" />
-        <module name="news-common-banner" />
         <module name="news-common-security" />
         <module name="news-common-openfeign" />
         <module name="news-config" />
+        <module name="news-api" />
         <module name="news-common-nacos" />
         <module name="database-redis" />
         <module name="database-mybatis-plus" />
         <module name="news-common-montor" />
         <module name="news-common-sentinel" />
-        <module name="news-api" />
+        <module name="news-common-banner" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -55,7 +55,6 @@
       <module name="news-common-sentinel" options="" />
       <module name="news-common-swagger" options="" />
       <module name="news-commons" options="-parameters" />
-      <module name="news-commons-base" options="-parameters" />
       <module name="news-config" options="" />
       <module name="news-database" options="-parameters" />
       <module name="news-gateway" options="" />

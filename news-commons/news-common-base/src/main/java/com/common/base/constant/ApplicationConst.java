@@ -42,7 +42,7 @@ public class ApplicationConst {
      * Mapper扫描包
      */
       public static final String MAPPER_UAA = "com.news.uaa.mapper";
-      public static final String MAPPER_USER = "com.news.admin.mapper";
+      public static final String MAPPER_ADMIN = "com.news.admin.mapper";
 //    public static final String MAPPER_ADMIN = "com.yc.admin.mapper";
 //    public static final String MAPPER_CMS = "com.yc.cms.mapper";
 //    public static final String MAPPER_CRAWLER = "com.yc.crawler.mapper";
