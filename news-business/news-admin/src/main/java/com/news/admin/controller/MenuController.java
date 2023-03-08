@@ -5,6 +5,7 @@ import com.common.base.dto.admin.menu.MenuStatusDTO;
 import com.common.base.dto.admin.menu.MenuUpdateDTO;
 import com.common.base.enity.user.MenuEntity;
 import com.common.base.result.R;
+import com.common.base.result.ResultCode;
 import com.common.base.utils.StringUtil;
 import com.news.admin.service.MenuService;
 import io.swagger.annotations.Api;
@@ -40,12 +41,8 @@ public class MenuController {
     @PostMapping("saveOrUpdateMenu")
     public R saveOrUpdateMenu(@RequestBody MenuEntity reqDTO){
         log.info("/menu/saveOrUpdateMenu"+reqDTO.toString());
-        boolean flag = menuService.saveOrUpdate(reqDTO);
-        if(flag){
-            return R.success("操作成功");
-        }else{
-            return R.fail("操作失敗");
-        }
+        return menuService.saveOrUpdate(reqDTO) ? R.success("操作成功") : R.fail("操作失败");
+
     }
 
  
@@ -58,15 +55,11 @@ public class MenuController {
      * @date    2023/3/7 16:36
     */
     @ApiOperation("改变菜单状态")
-    @PostMapping("forbidMenu/")
+    @PostMapping("changeMenuStatus")
     public R forbidMenu(@RequestBody MenuStatusDTO reqDTO){
         log.info("admin/menu/forbidMenu"+reqDTO.toString());
-        boolean flag = menuService.changeMenuStatus(reqDTO);
-        if(flag){
-            return R.success("修改成功~");
-        }else{
-            return R.fail("修改失败~");
-        }
+        return menuService.changeMenuStatus(reqDTO) ? R.success("修改成功") :R.fail("修改失败");
+
     }
     
     /**
@@ -101,7 +94,7 @@ public class MenuController {
     }
 
     /**
-     * @description 查询所有的用户
+     * @description 根据用户查询出所有
      * @param null
      * @return
      * @author  山竹

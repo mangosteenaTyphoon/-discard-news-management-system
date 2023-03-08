@@ -2,11 +2,7 @@ package com.common.base.result;
 
 public enum ResultCode {
 
-    UPDATE_SUCCESS("200","修改成功"),
     SELECT_SUCCESS("200", "成功"),
-    UPDATE_ERROR("500","修改失败"),
-    DELETE_SUCCESS("200","删除成功"),
-    DELETE_ERROR("500","删除失败"),
     FAIL_ERROR("500", "服务器异常"),
     TOKEN_ERROR("999999", "没有携带token或token已被踢下线"),
     PERM_ERROR("999998", "该用户无权限"),

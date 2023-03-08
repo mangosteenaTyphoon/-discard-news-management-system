@@ -4,6 +4,7 @@ import cn.hutool.core.util.IdUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.common.base.constant.admin.UserConst;
+import com.common.base.dto.admin.role.RoleStatusDTO;
 import com.common.base.enity.user.RoleEntity;
 import com.common.base.utils.StringUtil;
 import com.news.admin.mapper.RoleMapper;
@@ -40,5 +41,16 @@ public class RoleServiceImpl  extends ServiceImpl<RoleMapper,RoleEntity> impleme
             return StringUtil.isEmpty(roleEntity.getId()) && 1 == roleMapper.updateById(reqDTO);
         }
 
+    }
+
+    @Override
+    public boolean changeRoleStatus(RoleStatusDTO reqDTO) {
+        if(StringUtil.isEmpty(reqDTO.getId())){
+            return false;
+        }
+        RoleEntity roleEntity = new RoleEntity();
+        roleEntity.setId(reqDTO.getId());
+        roleEntity.setStatus(reqDTO.getRoleStatus());
+        return 1==roleMapper.updateById(roleEntity) ;
     }
 }
