@@ -39,6 +39,11 @@ public class RoleController {
     @PostMapping("saveOrUpdateRole")
     public R saveOrUpdate(@RequestBody RoleEntity reqDTO){
         log.info("admin/role/saveOrUpdateRole"+reqDTO);
+
         return roleService.saveOrUpdateRole(reqDTO) ? R.success("操作成功~") : R.fail("操作失败~");
     }
+
+
+
+
 }

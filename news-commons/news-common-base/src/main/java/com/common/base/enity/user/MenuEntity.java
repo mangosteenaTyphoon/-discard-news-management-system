@@ -1,5 +1,6 @@
 package com.common.base.enity.user;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -14,7 +15,7 @@ import lombok.Data;
 @TableName("sys_menu")
 public class MenuEntity {
 
-    @TableId
+    @TableId(value = "id",type = IdType.UUID)
     private String id;
 
     @TableField("menu_name")

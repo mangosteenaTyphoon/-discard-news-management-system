@@ -45,6 +45,7 @@ public class R<T> implements Serializable {
     }
 
     public static R fail(String msg) {
+
         return R.fail(ResultCode.FAIL_ERROR.getCode(), msg);
     }
 

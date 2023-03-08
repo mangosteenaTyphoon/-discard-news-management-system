@@ -1,7 +1,7 @@
 package com.common.base.enity.user;
 
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import java.util.Date;
@@ -15,17 +15,24 @@ import java.util.Date;
 @TableName("sys_role")
 public class RoleEntity {
 
-    @TableField
+    @TableId(value = "id",type = IdType.UUID)
     private String id;
 
     @TableField("role_name")
     private String roleName;
 
+    @TableField("role_key")
+    private String roleKey;
+
     private Integer status;
 
-    @TableField("create_time")
+
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", locale = "zh", timezone = "GMT+8")
+    @TableField(value = "create_time",fill = FieldFill.INSERT)
     private Date createTime;
 
-    @TableField("update_time")
+
+    @TableField(fill = FieldFill.INSERT_UPDATE,value = "update_time")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", locale = "zh", timezone = "GMT+8")
     private Date updateTime;
 }
