@@ -129,4 +129,33 @@ public class AuthController {
     public R<List<String>> getPerm(@RequestBody UserIdReqDTO reqDTO) {
         return R.success(userAuthService.queryUserIdByPerm(reqDTO));
     }
+
+
+    /**
+     * @description  给用户添加角色
+     * @param null
+     * @return
+     * @author  山竹
+     * @date    2023/3/9 10:03
+    */
+
+
+
+    /**
+     * @description 给角色添加相关的菜单
+     * @param null
+     * @return
+     * @author  山竹
+     * @date    2023/3/9 10:05
+    */
+
+
+
+    /**
+     * @description 获取用户的菜单权限
+     * @param null
+     * @return
+     * @author  山竹
+     * @date    2023/3/9 10:05
+    */
 }
